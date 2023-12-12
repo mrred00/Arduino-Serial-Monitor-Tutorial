@@ -1,119 +1,123 @@
 # Arduino Serial Monitor Tutorial
 
-## Proje 1: Seri Monitör Kullanımı
+# Support Me
+<p><a href="https://www.buymeacoffee.com/mailharunts"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="" /></a></p><br><br>
 
-[Kodu İncele](https://github.com/mrred00/Arduino-Serial-Monitor-Tutorial/blob/main/proje1/proje1.ino)
 
-### Amaç:
+## Project 1: Serial Monitor Usage
 
-Bu basit Arduino projesi, seri monitör üzerinden belirli aralıklarla kullanıcıya giriş yaptırmadan, sabit değerleri ekranda göstermektir.
+[View Code](https://github.com/mrred00/Arduino-Serial-Monitor-Tutorial/blob/main/proje1/proje1.ino)
 
-### Kullanılan Kütüphaneler:
+### Objective:
 
-1. **Arduino.h**: Temel Arduino fonksiyonlarını içeren kütüphane.
-2. **Serial.h**: Seri haberleşme işlemlerini sağlayan kütüphane.
+This simple Arduino project aims to display constant values on the screen at specific intervals through the serial monitor without requiring user input.
 
-### Kod:
+### Used Libraries:
+
+1. **Arduino.h**: Library containing basic Arduino functions.
+2. **Serial.h**: Library facilitating serial communication.
+
+### Code:
 
 ```cpp
 #include <Arduino.h>
 #include <Serial.h>
 
-// Sabit integer değerleri tanımla
-const int sabitInteger1 = 10;
-const int sabitInteger2 = 20;
-const int sabitInteger3 = 30;
+// Define constant integer values
+const int constantInteger1 = 10;
+const int constantInteger2 = 20;
+const int constantInteger3 = 30;
 
 void setup() {
   Serial.begin(9600);
 }
 
 void loop() {
-  // Sabit değerleri ekrana yazdır
-  Serial.print("Sabit Integer 1: ");
-  Serial.println(sabitInteger1);
-  Serial.print("Sabit Integer 2: ");
-  Serial.println(sabitInteger2);
-  Serial.print("Sabit Integer 3: ");
-  Serial.println(sabitInteger3);
+  // Print constant values to the screen
+  Serial.print("Constant Integer 1: ");
+  Serial.println(constantInteger1);
+  Serial.print("Constant Integer 2: ");
+  Serial.println(constantInteger2);
+  Serial.print("Constant Integer 3: ");
+  Serial.println(constantInteger3);
 
-  // 1 saniye bekleyerek değerleri güncelleme
+  // Update values with a 1-second delay
   delay(1000);
 }
 ```
 
-### Kod Açıklamaları:
+### Code Explanations:
 
-1. **Kütüphanelerin Eklenmesi:**
+1. **Including Libraries:**
     ```cpp
     #include <Arduino.h>
     #include <Serial.h>
     ```
-    İki kütüphane eklenir. `Arduino.h` temel Arduino fonksiyonlarını içerirken, `Serial.h` seri haberleşme işlemlerini sağlar.
+    Two libraries are included. `Arduino.h` contains basic Arduino functions, while `Serial.h` facilitates serial communication.
 
-2. **Sabit Değerlerin Tanımlanması:**
+2. **Defining Constant Values:**
     ```cpp
-    const int sabitInteger1 = 10;
-    const int sabitInteger2 = 20;
-    const int sabitInteger3 = 30;
+    const int constantInteger1 = 10;
+    const int constantInteger2 = 20;
+    const int constantInteger3 = 30;
     ```
-    Üç adet sabit integer değeri tanımlanır.
+    Three constant integer values are defined.
 
-3. **Setup Fonksiyonu:**
+3. **Setup Function:**
     ```cpp
     void setup() {
       Serial.begin(9600);
     }
     ```
-    - Seri haberleşme başlatılır ve baud oranı 9600 olarak ayarlanır.
+    - Serial communication is initiated with a baud rate of 9600.
 
-4. **Loop Fonksiyonu:**
+4. **Loop Function:**
     ```cpp
     void loop() {
-      Serial.print("Sabit Integer 1: ");
-      Serial.println(sabitInteger1);
-      Serial.print("Sabit Integer 2: ");
-      Serial.println(sabitInteger2);
-      Serial.print("Sabit Integer 3: ");
-      Serial.println(sabitInteger3);
+      Serial.print("Constant Integer 1: ");
+      Serial.println(constantInteger1);
+      Serial.print("Constant Integer 2: ");
+      Serial.println(constantInteger2);
+      Serial.print("Constant Integer 3: ");
+      Serial.println(constantInteger3);
 
-      // 1 saniye bekleyerek değerleri güncelleme
+      // Update values with a 1-second delay
       delay(1000);
     }
     ```
-    - Her saniye bir, sabit integer değerleri seri monitöre yazdırılır.
+    - Every second, constant integer values are printed to the serial monitor.
 
-### Algoritma:
+### Algorithm:
 
-1. **Başlangıç:**
-    - Temel kütüphaneler eklenir ve sabit integer değerler tanımlanır.
+1. **Initialization:**
+    - Basic libraries are included, and constant integer values are defined.
 
-2. **Setup Fonksiyonu:**
-    - Seri haberleşme başlatılır.
+2. **Setup Function:**
+    - Serial communication is initiated.
+  
+3. **Loop Function:**
+    - Every second, constant integer values are printed to the serial monitor.
+    - A `delay(1000)` function is used to wait for 1 second.
 
-3. **Loop Fonksiyonu:**
-    - Her saniye bir, sabit integer değerleri seri monitöre yazdırılır.
-    - `delay(1000)` fonksiyonu ile 1 saniye beklenir.
+4. **Repeat:**
+    - The loop function continuously runs, keeping the values up-to-date and displaying them on the serial monitor.
 
-4. **Tekrar:**
-    - Loop fonksiyonu sürekli olarak çalışarak değerleri güncel tutar ve seri monitöre yazdırır.
+This project displays constant values on the screen without requiring user input. It is useful for understanding the basic features of Arduino and serial communication.
 
-Bu proje, kullanıcının giriş yapmasına gerek olmadan sabit değerleri ekranda görüntülemektedir. Bu basit proje, Arduino'nun temel özelliklerini ve seri haberleşmeyi anlamak için kullanışlıdır.
+## Project 2: Interactive Input with Arduino Serial Monitor
 
-##Proje 2: Arduino Seri Monitör İnteraktif Giriş
+[Download Code](https://github.com/mrred00/Arduino-Serial-Monitor-Tutorial/blob/main/Proje2/project2.ino)
 
-[Kodu İndir](https://github.com/mrred00/Arduino-Serial-Monitor-Tutorial/blob/main/Proje2/project2.ino)
+### Objective:
 
-### Amaç:
+The aim of this Arduino project is to allow the user to input three integer values via the serial monitor and display these values on the screen every second.
 
-Bu Arduino projesinin amacı, kullanıcının seri monitör aracılığıyla üç adet integer değeri girmesini sağlamak ve bu değerleri ekranda her saniye güncel bir şekilde göstermektir.
+### Used Libraries:
 
-### Kullanılan Kütüphaneler:
+1. **Arduino.h**: Library containing basic Arduino functions.
+2. **Serial.h**: Library managing serial communication.
 
-1. **Arduino.h**: Temel Arduino fonksiyonlarını içeren kütüphane.
-2. **Serial.h**: Seri haberleşme işlemlerini yöneten kütüphane.
-
-### Kod:
+### Code:
 
 ```cpp
 #include <Arduino.h>
@@ -124,13 +128,13 @@ int integer1, integer2, integer3;
 void setup() {
   Serial.begin(9600);
 
-  Serial.println("Lütfen ilk integer değeri girin: ");
+  Serial.println("Please enter the first integer value: ");
   while(!Serial.available());
   integer1 = Serial.parseInt();
-  Serial.println("Lütfen ikinci integer değeri girin: ");
+  Serial.println("Please enter the second integer value: ");
   while(!Serial.available());
   integer2 = Serial.parseInt();
-  Serial.println("Lütfen üçüncü integer değeri girin: ");
+  Serial.println("Please enter the third integer value: ");
   while(!Serial.available());
   integer3 = Serial.parseInt();
 }
@@ -147,41 +151,41 @@ void loop() {
 }
 ```
 
-### Kod Açıklamaları:
+### Code Explanations:
 
-1. **Kütüphanelerin Eklenmesi:**
+1. **Including Libraries:**
     ```cpp
     #include <Arduino.h>
     #include <Serial.h>
     ```
-    İki kütüphane eklenir. `Arduino.h` temel Arduino fonksiyonlarını içerirken, `Serial.h` seri haberleşme işlemlerini sağlar.
+    Two libraries are included. `Arduino.h` contains basic Arduino functions, while `Serial.h` facilitates serial communication.
 
-2. **Global Değişkenlerin Tanımlanması:**
+2. **Defining Global Variables:**
     ```cpp
     int integer1, integer2, integer3;
     ```
-    Üç adet integer değişken tanımlanır.
+    Three integer variables are defined.
 
-3. **Setup Fonksiyonu:**
+3. **Setup Function:**
     ```cpp
     void setup() {
       Serial.begin(9600);
     
-      Serial.println("Lütfen ilk integer değeri girin: ");
+      Serial.println("Please enter the first integer value: ");
       while(!Serial.available());
       integer1 = Serial.parseInt();
-      Serial.println("Lütfen ikinci integer değeri girin: ");
+      Serial.println("Please enter the second integer value: ");
       while(!Serial.available());
       integer2 = Serial.parseInt();
-      Serial.println("Lütfen üçüncü integer değeri girin: ");
+      Serial.println("Please enter the third integer value: ");
       while(!Serial.available());
       integer3 = Serial.parseInt();
     }
     ```
-    - `Serial.begin(9600);`: Seri haberleşme başlatılır ve baud oranı 9600 olarak ayarlanır.
-    - Kullanıcıdan üç adet integer değeri alınır.
+    - `Serial.begin(9600);`: Serial communication is initiated with a baud rate of 9600.
+    - The user is prompted to enter three integer values.
 
-4. **Loop Fonksiyonu:**
+4. **Loop Function:**
     ```cpp
     void loop() {
       Serial.print("Integer 1: ");
@@ -194,22 +198,22 @@ void loop() {
       delay(1000);
     }
     ```
-    - Her saniye bir, kullanıcının girdiği integer değerleri seri monitöre yazdırılır.
+    - Every second, the user-inputted integer values are printed to the serial monitor.
 
-### Algoritma:
+### Algorithm:
 
-1. **Başlangıç:**
-    - Temel kütüphaneler eklenir ve global değişkenler tanımlanır.
+1. **Initialization:**
+    - Basic libraries are included, and global variables are defined.
 
-2. **Setup Fonksiyonu:**
-    - Seri haberleşme başlatılır.
-    - Kullanıcıdan üç adet integer değeri alınır.
+2. **Setup Function:**
+    - Serial communication is initiated.
+    - The user is prompted to enter three integer values.
 
-3. **Loop Fonksiyonu:**
-    - Her saniye bir, kullanıcının girdiği integer değerleri seri monitöre yazdırılır.
-    - `delay(1000)` fonksiyonu ile 1 saniye beklenir.
+3. **Loop Function:**
+    - Every second, the user-inputted integer values are printed to the serial monitor.
+    - A `delay(1000)` function is used to wait for 1 second.
 
-4. **Tekrar:**
-    - Loop fonksiyonu sürekli olarak çalışarak değerleri güncel tutar ve seri monitöre yazdırır.
+4. **Repeat:**
+    - The loop function continuously runs, keeping the user-inputted values up-to-date and displaying them on the serial monitor.
 
-Bu proje, kullanıcıdan giriş almayı ve ardından bu girişi işlemeyi içerir. Seri monitör aracılığıyla kullanıcı ile iletişim kurulur ve alınan değerler ekranda görüntülenir. Bu basit proje, Arduino'nun temel özelliklerini ve seri haberleşmeyi anlamak için güzel bir başlangıçtır.
+This project involves taking input from the user and then displaying these values on the screen. Communication with the user is established via the serial monitor, and the entered values are continuously updated and displayed. This simple project is a good starting point for understanding Arduino's basic features and serial communication.
