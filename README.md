@@ -2,7 +2,7 @@
 
 ## Proje 1: Seri Monitör Kullanımı
 
-[Kodu İncele](https://github.com/mrred00/Arduino-Serial-Monitor-Tutorial/blob/main/Proje1/proje1.ino)
+[Kodu İncele](https://github.com/mrred00/Arduino-Serial-Monitor-Tutorial/blob/main/proje1/proje1.ino)
 
 ### Amaç:
 
