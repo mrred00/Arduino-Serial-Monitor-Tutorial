@@ -1,8 +1,108 @@
 # Arduino Serial Monitor Tutorial
 
-## Proje 
+## Proje 1: Seri Monitör Kullanımı
 
-## Proje 2: Arduino Seri Monitör İnteraktif Giriş
+[Kodu İncele](https://github.com/mrred00/Arduino-Serial-Monitor-Tutorial/blob/main/Proje1/project1.ino)
+
+### Amaç:
+
+Bu basit Arduino projesi, seri monitör üzerinden belirli aralıklarla kullanıcıya giriş yaptırmadan, sabit değerleri ekranda göstermektir.
+
+### Kullanılan Kütüphaneler:
+
+1. **Arduino.h**: Temel Arduino fonksiyonlarını içeren kütüphane.
+2. **Serial.h**: Seri haberleşme işlemlerini sağlayan kütüphane.
+
+### Kod:
+
+```cpp
+#include <Arduino.h>
+#include <Serial.h>
+
+// Sabit integer değerleri tanımla
+const int sabitInteger1 = 10;
+const int sabitInteger2 = 20;
+const int sabitInteger3 = 30;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Sabit değerleri ekrana yazdır
+  Serial.print("Sabit Integer 1: ");
+  Serial.println(sabitInteger1);
+  Serial.print("Sabit Integer 2: ");
+  Serial.println(sabitInteger2);
+  Serial.print("Sabit Integer 3: ");
+  Serial.println(sabitInteger3);
+
+  // 1 saniye bekleyerek değerleri güncelleme
+  delay(1000);
+}
+```
+
+### Kod Açıklamaları:
+
+1. **Kütüphanelerin Eklenmesi:**
+    ```cpp
+    #include <Arduino.h>
+    #include <Serial.h>
+    ```
+    İki kütüphane eklenir. `Arduino.h` temel Arduino fonksiyonlarını içerirken, `Serial.h` seri haberleşme işlemlerini sağlar.
+
+2. **Sabit Değerlerin Tanımlanması:**
+    ```cpp
+    const int sabitInteger1 = 10;
+    const int sabitInteger2 = 20;
+    const int sabitInteger3 = 30;
+    ```
+    Üç adet sabit integer değeri tanımlanır.
+
+3. **Setup Fonksiyonu:**
+    ```cpp
+    void setup() {
+      Serial.begin(9600);
+    }
+    ```
+    - Seri haberleşme başlatılır ve baud oranı 9600 olarak ayarlanır.
+
+4. **Loop Fonksiyonu:**
+    ```cpp
+    void loop() {
+      Serial.print("Sabit Integer 1: ");
+      Serial.println(sabitInteger1);
+      Serial.print("Sabit Integer 2: ");
+      Serial.println(sabitInteger2);
+      Serial.print("Sabit Integer 3: ");
+      Serial.println(sabitInteger3);
+
+      // 1 saniye bekleyerek değerleri güncelleme
+      delay(1000);
+    }
+    ```
+    - Her saniye bir, sabit integer değerleri seri monitöre yazdırılır.
+
+### Algoritma:
+
+1. **Başlangıç:**
+    - Temel kütüphaneler eklenir ve sabit integer değerler tanımlanır.
+
+2. **Setup Fonksiyonu:**
+    - Seri haberleşme başlatılır.
+
+3. **Loop Fonksiyonu:**
+    - Her saniye bir, sabit integer değerleri seri monitöre yazdırılır.
+    - `delay(1000)` fonksiyonu ile 1 saniye beklenir.
+
+4. **Tekrar:**
+    - Loop fonksiyonu sürekli olarak çalışarak değerleri güncel tutar ve seri monitöre yazdırır.
+
+Bu proje, kullanıcının giriş yapmasına gerek olmadan sabit değerleri ekranda görüntülemektedir. Bu basit proje, Arduino'nun temel özelliklerini ve seri haberleşmeyi anlamak için kullanışlıdır.
+
+##Proje 2: Arduino Seri Monitör İnteraktif Giriş
+
+[Kodu İndir](https://github.com/mrred00/Arduino-Serial-Monitor-Tutorial/blob/main/Proje2/project2.ino)
 
 ### Amaç:
 
